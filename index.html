@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Химия боюнча презентация</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #1e272e; color: white; text-align: center; }
+        .slide { display: none; padding: 50px; }
+        .active { display: block; }
+        h1 { color: #f1c40f; }
+        h2 { color: #e74c3c; }
+        p { font-size: 20px; }
+        .navigation { margin-top: 20px; }
+        button { background: #3498db; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; }
+        button:hover { background: #2980b9; }
+    </style>
+</head>
+<body>
+    <div class="slide active">
+        <h1>Химияга кош келиңиз!</h1>
+        <p>Бул презентацияда химиянын негизги концепциялары менен таанышабыз.</p>
+    </div>
+    <div class="slide">
+        <h2>1. Химия деген эмне?</h2>
+        <p>Химия – заттардын курамын, түзүлүшүн, касиеттерин жана алардын өзгөрүүлөрүн изилдеген илим.</p>
+    </div>
+    <div class="slide">
+        <h2>2. Заттын абалы</h2>
+        <p>Зат үч абалда болот: катуу, суюк жана газ.</p>
+    </div>
+    <div class="slide">
+        <h2>3. Периоддук система</h2>
+        <p>Менделеев түзгөн элементтердин таблицасы химиянын негизги куралдарынын бири.</p>
+    </div>
+    <div class="slide">
+        <h2>4. Химиялык реакциялар</h2>
+        <p>Химиялык реакция – бул бир зат экинчи затка айланганда пайда болгон процесс.</p>
+    </div>
+    <div class="slide">
+        <h2>5. Кислоталар жана негиздер</h2>
+        <p>Кислоталар – суутек иондорун берет, негиздер – гидроксид иондорун берет.</p>
+    </div>
+    <div class="slide">
+        <h2>6. Органикалык жана органикалык эмес химия</h2>
+        <p>Органикалык химия көмүртек бирикмелерин изилдейт, ал эми органикалык эмес химия башка элементтерди изилдейт.</p>
+    </div>
+    <div class="slide">
+        <h2>7. Химия күнүмдүк жашоодо</h2>
+        <p>Химия тамак-аш, дары-дармек, өнөр жай жана экология тармагында колдонулат.</p>
+    </div>
+    <div class="slide">
+        <h2>8. Рахмат!</h2>
+        <p>Химия дүйнөнү өзгөртөт! Билим алууңуздарга ийгилик!</p>
+    </div>
+    <div class="navigation">
+        <button onclick="prevSlide()">Артка</button>
+        <button onclick="nextSlide()">Алга</button>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+    </script>
+</body>
+</html>
